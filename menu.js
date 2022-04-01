@@ -124,7 +124,7 @@ let foodArr = [pepperoni, cheese, sausage, hawaiian, breadSticks]
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(tag => foodArr.tag[0] === 'vegitarian');
+const filteredFood = foodArr.filter(tag => foodArr.tags.includes(tag));
 
 console.log(filteredFood)
 
@@ -172,7 +172,7 @@ console.log(filteredFood)
 //CODE HERE
 const filterByProperty = (property, number, type) => {
     let filtArr = foodArr.filter(food => {
-        if (type === 'above' && ) {
+        if (type === 'above') {
             return 
         }
     }
