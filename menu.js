@@ -102,10 +102,10 @@ console.log(pepperoniCategory);
 */
 
 //CODE HERE
-let cheese = new Food('Cheese', 7.99, 'Classics', 4, 3.5, ['vegitarian', 'entree','kids']);
+let cheese = new Food('Cheese', 7.99, 'Classics', 4, 3.5, ['vegetarian', 'entree','kids']);
 let sausage = new Food('Sausage', 8.99, 'Classics', 4, 3.5, ['meat', 'entree', 'kids']);
 let hawaiian = new Food('Hawaiian', 10.99, 'Specialty', 3, 4.5, ['meat', 'entree', 'cult favorite']);
-let breadSticks = new Food('Bread Sticks', 4.99, 'Appetizers', 4, 4, ['vegitarian', 'appetizer', 'kids'])
+let breadSticks = new Food('Bread Sticks', 4.99, 'Appetizers', 4, 4, ['vegetarian', 'appetizer', 'kids'])
 
 let foodArr = [pepperoni, cheese, sausage, hawaiian, breadSticks]
 
@@ -124,7 +124,7 @@ let foodArr = [pepperoni, cheese, sausage, hawaiian, breadSticks]
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(tag => foodArr.tags.includes(tag));
+const filteredFood = foodArr.filter(food => food.tags.includes('vegetarian'));
 
 console.log(filteredFood)
 
@@ -173,9 +173,12 @@ console.log(filteredFood)
 const filterByProperty = (property, number, type) => {
     let filtArr = foodArr.filter(food => {
         if (type === 'above') {
-            return 
+            return food[property] > number;
+        }   else if (type === 'below') {
+                return food[property] < number;
         }
-    }
+    })
+    return filtArr
 }
 
 /*

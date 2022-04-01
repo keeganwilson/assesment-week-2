@@ -82,10 +82,10 @@ calcFinalPrice = (cartTotal, couponValue, tax) => (cartTotal + (cartTotal * tax)
 /*
     TEXT ANSWER HERE
 I would want each customer to have the following properties: 
-    name(something to id them by)
-    phone number(a method of contact for when their order is ready)
-    email(someplace to send their receipt to)
-    card on file(an array containing cc info so be saved for frequent use)
+    name string (something to id them by)
+    phone number string (a method of contact for when their order is ready)
+    email string (someplace to send their receipt to)
+    card on file array of nums (an array containing cc info so be saved for frequent use)
 */
 
 /*
