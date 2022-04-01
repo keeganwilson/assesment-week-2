@@ -34,8 +34,9 @@ const cart = [
 ]
 
 //CODE HERE
+const summedPrice = cart.reduce((a, c) => a + c.price, 0)
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+//console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,8 +55,9 @@ const cart = [
 */
 
 //CODE HERE
+calcFinalPrice = (cartTotal, couponValue, tax) => (cartTotal + (cartTotal * tax) - couponValue).toFixed(2); 
 
-
+//console.log(calcFinalPrice(27.95, 5, 0.07));
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +81,11 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+I would want each customer to have the following properties: 
+    name(something to id them by)
+    phone number(a method of contact for when their order is ready)
+    email(someplace to send their receipt to)
+    card on file(an array containing cc info so be saved for frequent use)
 */
 
 /*
@@ -88,3 +94,9 @@ const cart = [
 */
 
 //CODE HERE
+let customer1 = {
+    name: 'Keegan',
+    phoneNumber: '(555) 555-5555',
+    email: 'someguy@gmail.com',
+    ccInfo: [256378456985, 0225, 895]
+}
